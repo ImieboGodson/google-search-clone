@@ -126,12 +126,12 @@ body {
 }
 
 .searchbox .searchbox-icon {
-    padding: 0 10px;
+    padding: 0 5px;
     /* color: #d0d2d5; */
 }
 
-.searchbox .search-icon {
-    color: #d0d2d5;
+.search-icon img {
+    width: 25px;
 }
 
 .search-by-voice-icon img {
@@ -254,6 +254,10 @@ body {
     text-decoration: underline;
 }
 
+
+/* Media Queries */
+
+/* Medium Screen Sizes */
 @media (max-width: 800px) {
     /* Header */
     .header .header-links {
@@ -262,7 +266,6 @@ body {
 
     .link-wrapper a.link-text {
         font-size: x-small;
-        color: rgba(29, 29, 29, 0.87);
     }
 
     .link-wrapper a.apps-link {
@@ -273,10 +276,10 @@ body {
         width: 16px;
     }
 
-    .header-links .link-wrapper.gmail-wrapper {
+    /* .header-links .link-wrapper.gmail-wrapper {
         width: 47px;
         height: 47px;
-    }
+    } */
     
     .link-wrapper a.gmail-account {
         padding: 5px 8px;
@@ -295,7 +298,12 @@ body {
     /* Searchbox */
     .searchbox {
         width: 62%;
-        height: 35px;
+        height: 40px;
+        padding: 4px;
+    }
+
+    .search-icon img {
+        width: 18px;
     }
 
     .search-by-voice-icon img {
@@ -340,5 +348,113 @@ body {
 
     .footer-bottom-wrapper {
         justify-content: space-around;
+    }
+}
+
+/* Smaller Screen Sizes */
+@media (max-width: 500px) {
+    /* Header */
+    .header .header-links {
+        width: 30%;
+    }
+
+    .link-wrapper a.link-text {
+        font-size: 5px;
+    }
+
+    .link-wrapper a.apps-link {
+        padding: 6px;
+    }
+    
+    .link-wrapper a.apps-link img {
+        width: 8px;
+    }
+
+    .header-links .link-wrapper.gmail-wrapper {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .link-wrapper a.gmail-account {
+        padding: 3px 4px;
+        font-size: 8px;
+    }
+
+     /* Google Image */
+     .main-image-wrapper {
+        margin-top: 20px;
+    }
+
+    .main-image-wrapper img {
+        width: 100px;
+    }
+
+
+
+    /* Searchbox */
+    .searchbox {
+        width: 75%;
+        height: 30px;
+        padding: 4px;
+    }
+
+    .search-icon img {
+        width: 10px;
+    }
+
+    .search-by-voice-icon img {
+        width: 8px;
+    }
+
+    .searchbox .input-wrapper {
+        width: 97%;
+        padding: 0 10px;
+        margin-bottom: 3px;
+    }
+
+    /* Center-page Buttons */
+    .center-page-buttons {
+        margin: 10px 0;
+    }
+
+    .center-page-buttons button {
+        margin: 0 3px;
+        height: 20px;
+        width: 60px;
+        font-size: 5px;
+    }
+
+     /* Language Options */
+     .language-options-wrapper p,
+     .language-options-wrapper .language-option {
+         font-size: 5px;
+         margin-right: 6px;
+     }
+
+
+    /* Footer */
+    .footer-top-wrapper,
+    .footer-bottom-wrapper {
+        padding: 10px;
+        font-size: 5px;
+    }
+
+    .footer-top-wrapper {
+        margin-bottom: 25px;
+        border-bottom: 1px solid #dfe1e5;
+    }
+
+    .center-bottom-link {
+        left: 40%;
+        bottom: 35px;
+    }
+
+    .footer-bottom-wrapper {
+        justify-content: space-between;
+    }
+
+    .footer-links {
+        padding: 0 5px;
+        margin: 0;
     }
 }
