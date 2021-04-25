@@ -12,12 +12,12 @@ body {
 
 .container {
     width: 100%;
-    height: 100vh;
-    padding: 10px;
+    max-height: 100vh;
+    padding: 0 5px;
 }
 
-.header {
-    padding: 10px;
+.container .header {
+    padding: 0 5px;
     width: 100%;
     height: 60px;
     position: relative;
@@ -26,65 +26,319 @@ body {
     align-items: center;
 }
 
-.header-links {
+.header .header-links {
+    width: 15.5%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
 }
 
 .header-links .link-wrapper {
-    margin: 0 15px;
+    padding: 5px;
 }
 
-.header-links .link-wrapper a {
+.header-links .link-wrapper.google-apps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-wrapper a {
     text-decoration: none;
-    font-size: small;
-    line-height: 24px;
-    color: rgba(0,0,0,0.87);
 }
 
-.header-links .link-wrapper .underline-text:hover {
+.link-wrapper a.link-text {
+    font-size: small;
+    color: rgba(29, 29, 29, 0.87);
+}
+
+.link-wrapper a.link-text:hover {
     text-decoration: underline;
 }
 
-.header-links .link-wrapper a i {
-    color: #5f6368;
+.link-wrapper a.apps-link {
+    padding: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.header-links .link-wrapper a i:hover {
-    padding: 10px 11px;
-    background-color: #d7d9db;
+.link-wrapper a.apps-link img {
+    width: 20px;
+}
+
+.link-wrapper a.apps-link:hover {
+    background-color: #eee;
     border-radius: 50%;
 }
 
-.header-links .link-wrapper .letter-g {
-    padding: 8px 11px;
-    font-size: 16px;
+.header-links .link-wrapper.gmail-wrapper {
+    width: 47px;
+    height: 47px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-wrapper a.gmail-account {
+    padding: 7px 10px;
     font-weight: bold;
-    line-height: 30px;
-    color: #fff;
-    background-color: rgb(101, 153, 101);
+    color: rgba(240, 239, 239, 0.919);
+    background-color: rgba(81, 157, 26, 0.905);
     border-radius: 50%;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 15%);
+    /* border: 3px solid transparent; */
 }
 
-.letter-g:hover {
-    border: 3px solid #e4eaf1;
+.link-wrapper a.gmail-account:hover {
+    border: 3px solid #e3e5e8fd;;
 }
 
 
 /* Main Contents */
 
-.center-page-contents {
+.container .center-page-contents {
     width: 100%;
     text-align: center;
 }
 
+/* Google Image */
 .main-image-wrapper img {
-    width: 23%;
+    width: 275px;
 }
 
+/* Searchbox */
 .searchbox {
-    width: 40%;
+    margin: auto;
+    padding: 10px;
+    width: 45%;
+    height: 50px;
     display: flex;
-    border: 1px solid #5f6368;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid #dfe1e5;
+}
+
+.searchbox:hover,
+.searchbox:focus-within {
+    box-shadow: 0 1px 6px rgba(32, 33, 36,  28%);
+}
+
+.searchbox .searchbox-icon {
+    padding: 0 10px;
+    /* color: #d0d2d5; */
+}
+
+.searchbox .search-icon {
+    color: #d0d2d5;
+}
+
+.search-by-voice-icon img {
+    width: 15px;
+}
+
+.searchbox .input-wrapper {
+    width: 90%;
+    padding: 0 10px;
+    margin-bottom: 3px;
+}
+
+.input-wrapper input {
+    width: 100%;
+    /* height: 35px; */
+    border: none;
+    outline: none;
+}
+
+/* Center-page Buttons */
+.center-page-buttons {
+    margin: 30px 0;
+}
+
+.center-page-buttons button {
+    margin: 0 10px;
+    height: 40px;
+    width: 150px;
+    word-spacing: normal;
+    color: #202124;
+    background-color: #f8f9fa;
+    border: none;
+    border-radius: 4px;
+}
+
+.center-page-buttons button:hover {
+    color: rgb(0, 0, 0);
+    border: 1px solid #dadce0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 15%);
+}
+
+/* Languages Options */
+.language-options-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.language-options-wrapper p,
+.language-options-wrapper .language-option {
+    font-size: small;
+    margin-right: 10px;
+}
+
+.language-options-wrapper .language-option a {
+    text-decoration: none;
+    color: #1a0dab;
+}
+
+.language-options-wrapper .language-option a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer */
+#footer {
+    padding: 0 10px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #f2f2f2;
+}
+
+.footer-top-wrapper,
+.footer-bottom-wrapper {
+    padding: 15px;
+    font-size: 14px;
+}
+
+.footer-top-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.location-country p {
+    padding-left: 10px;
+    color: #70757a;
+}
+
+.footer-bottom-wrapper,
+.left-bottom-links,
+.right-bottom-links {
+    display: flex;
+}
+
+.footer-bottom-wrapper {
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #dfe1e5;
+}
+
+.center-bottom-link {
+    position: absolute;
+    left: 43%;
+}
+
+.footer-links {
+    padding: 0 5px;
+    margin: 0 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #70757a;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+    /* Header */
+    .header .header-links {
+        width: 23%;
+    }
+
+    .link-wrapper a.link-text {
+        font-size: x-small;
+        color: rgba(29, 29, 29, 0.87);
+    }
+
+    .link-wrapper a.apps-link {
+        padding: 9px;
+    }
+    
+    .link-wrapper a.apps-link img {
+        width: 16px;
+    }
+
+    .header-links .link-wrapper.gmail-wrapper {
+        width: 47px;
+        height: 47px;
+    }
+    
+    .link-wrapper a.gmail-account {
+        padding: 5px 8px;
+        font-size: smaller;
+    }
+
+    /* Google Image */
+    .main-image-wrapper {
+        margin-top: 100px;
+    }
+
+    .main-image-wrapper img {
+        width: 230px;
+    }
+
+    /* Searchbox */
+    .searchbox {
+        width: 62%;
+        height: 35px;
+    }
+
+    .search-by-voice-icon img {
+        width: 10px;
+    }
+
+    /* Center-page Buttons */
+    .center-page-buttons {
+        margin: 20px 0;
+    }
+
+    .center-page-buttons button {
+        margin: 0 3px;
+        height: 36px;
+        width: 100px;
+        font-size: x-small;
+    }
+
+    /* Language Options */
+    .language-options-wrapper p,
+    .language-options-wrapper .language-option {
+        font-size: x-small;
+        margin-right: 8px;
+    }
+
+    /* Footer */
+    .footer-top-wrapper,
+    .footer-bottom-wrapper {
+        padding: 15px;
+        font-size: x-small;
+    }
+
+    .footer-top-wrapper {
+        margin-bottom: 35px;
+        border-bottom: 1px solid #dfe1e5;
+    }
+
+    .center-bottom-link {
+        left: 40%;
+        bottom: 50px;
+    }
+
+    .footer-bottom-wrapper {
+        justify-content: space-around;
+    }
 }
