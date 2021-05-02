@@ -39,7 +39,7 @@
 
 <!-- List the features of your application or follow the template. Don't share the figma file here :) -->
 
-This is a very basic project that was built on the principle of "mobile first' design. The goal was to make sure that it looks as close to the real google search page. while also making sure that the webpage looks good on every screen the user might be viewing it on.
+This is a very basic project that was built on the principle of "mobile first' design. The goal was to make sure that it looks as close to the real google search page, while also making sure that the webpage looks good on every screen the user might be viewing it on.
 
 
 ## Acknowledgements
